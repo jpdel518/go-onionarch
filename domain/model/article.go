@@ -1,14 +1,13 @@
 package model
 
-import "time"
-
 type Article struct {
 	ID            int64
 	Title         string
 	Content       string
 	Recommend     string
+	AuthorId      int64
 	Author        Author
-	UpdatedAt     time.Time
-	CreatedAt     time.Time
-	RecommendedAt time.Time
+	UpdatedAt     MyTime
+	CreatedAt     MyTime
+	RecommendedAt MyTime
 }
