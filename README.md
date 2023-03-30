@@ -6,7 +6,7 @@
 
 ![Architecture図](onion_architecture.png)
 
-### presenter(controller)
+### presentation(controller)
 - Layered ArchitectureにおけるUI(Presentation)層
 - 外部から入力を受け取り、返却することが責務
 
