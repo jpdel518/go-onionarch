@@ -13,7 +13,7 @@ func NewHandler(usecase usecase.ArticleUsecase) error {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/article/fetch", articleHandler.Fetch)
-	mux.HandleFunc("/article/show-by-id", articleHandler.ShowById)
+	mux.HandleFunc("/article/show-by-id/", articleHandler.ShowById)
 	mux.HandleFunc("/article/get-by-title", articleHandler.ShowByTitle)
 	mux.HandleFunc("/article/update", articleHandler.Update)
 	mux.HandleFunc("/article/store", articleHandler.Store)
