@@ -5,7 +5,7 @@ import (
 	"github.com/jpdel518/go-onionarch/domain/service"
 	"github.com/jpdel518/go-onionarch/infrastructure/rdb"
 	"github.com/jpdel518/go-onionarch/infrastructure/rdb/mysql"
-	handler2 "github.com/jpdel518/go-onionarch/presenter/handler"
+	handler2 "github.com/jpdel518/go-onionarch/presentation/handler"
 	"github.com/jpdel518/go-onionarch/usecase"
 	"github.com/jpdel518/go-onionarch/utils"
 	"log"
@@ -16,6 +16,7 @@ import (
 func init() {
 	loadEnv()
 	initLogging()
+	mysql.InitDatabase()
 }
 
 func loadEnv() {

@@ -21,11 +21,7 @@ const (
 	tableAuthor  = "authors"
 )
 
-func init() {
-	LoadConfig()
-}
-
-func LoadConfig() {
+func InitDatabase() {
 	c := config{
 		SQLDriver: os.Getenv("RDB_DRIVER"),
 		DbName:    os.Getenv("RDB_NAME"),
