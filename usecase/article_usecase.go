@@ -131,7 +131,7 @@ func (a *articleUsecase) Update(c context.Context, ar *model.Article) error {
 	ctx, cancel := context.WithTimeout(c, a.contextTimeout)
 	defer cancel()
 
-	ar.UpdatedAt = time.Now()
+	ar.UpdatedAt = model.MyTime{Time: time.Now()}
 	return a.articleRepo.Update(ctx, ar)
 }
 

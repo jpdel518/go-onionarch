@@ -7,7 +7,7 @@ import (
 )
 
 type MyTime struct {
-	*time.Time
+	time.Time
 }
 
 // UnmarshalJSON will be called by json.Unmarshal
@@ -16,11 +16,11 @@ func (mt *MyTime) UnmarshalJSON(data []byte) error {
 	s := strings.Trim(string(data), "\"")
 	if s == "null" {
 		t, err := time.Parse("2006/01/02", string(data))
-		*mt = MyTime{&t}
+		*mt = MyTime{t}
 		return err
 	}
 	t, err := time.Parse("2006/01/02", s)
-	*mt = MyTime{&t}
+	*mt = MyTime{t}
 	return err
 }
 
